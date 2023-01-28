@@ -44,8 +44,9 @@
             // 
             this.LoginForm_palette.ButtonSpecs.FormClose.Image = global::project.Properties.Resources.mc_red;
             this.LoginForm_palette.ButtonSpecs.FormClose.ImageStates.ImagePressed = global::project.Properties.Resources.mc_red;
-            this.LoginForm_palette.ButtonSpecs.FormClose.ImageStates.ImageTracking = global::project.Properties.Resources.mc_red;
+            this.LoginForm_palette.ButtonSpecs.FormClose.ImageStates.ImageTracking = global::project.Properties.Resources.sign_error_icon;
             this.LoginForm_palette.ButtonSpecs.FormClose.Orientation = ComponentFactory.Krypton.Toolkit.PaletteButtonOrientation.Auto;
+            this.LoginForm_palette.ButtonSpecs.FormClose.Style = ComponentFactory.Krypton.Toolkit.PaletteButtonStyle.Form;
             this.LoginForm_palette.ButtonSpecs.FormMax.Image = global::project.Properties.Resources.mc_green;
             this.LoginForm_palette.ButtonSpecs.FormMax.ImageStates.ImagePressed = global::project.Properties.Resources.mc_green;
             this.LoginForm_palette.ButtonSpecs.FormMax.ImageStates.ImageTracking = global::project.Properties.Resources.mc_green;
@@ -99,7 +100,7 @@
             // 
             // loginField
             // 
-            this.loginField.Location = new System.Drawing.Point(100, 330);
+            this.loginField.Location = new System.Drawing.Point(92, 330);
             this.loginField.MaxLength = 30;
             this.loginField.Name = "loginField";
             this.loginField.Size = new System.Drawing.Size(300, 43);
@@ -125,7 +126,7 @@
             // 
             // passwordField
             // 
-            this.passwordField.Location = new System.Drawing.Point(100, 385);
+            this.passwordField.Location = new System.Drawing.Point(92, 385);
             this.passwordField.MaxLength = 20;
             this.passwordField.Name = "passwordField";
             this.passwordField.Size = new System.Drawing.Size(300, 43);
@@ -151,7 +152,7 @@
             // enterButton
             // 
             this.enterButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.enterButton.Location = new System.Drawing.Point(100, 450);
+            this.enterButton.Location = new System.Drawing.Point(92, 450);
             this.enterButton.Name = "enterButton";
             this.enterButton.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(74)))), ((int)(((byte)(26)))));
             this.enterButton.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(183)))), ((int)(((byte)(51)))));
@@ -183,6 +184,7 @@
             this.enterButton.StateCommon.Border.Width = 1;
             this.enterButton.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(34)))), ((int)(((byte)(65)))));
             this.enterButton.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Black", 15F, System.Drawing.FontStyle.Bold);
+            this.enterButton.StateCommon.Content.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAliasGridFit;
             this.enterButton.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(40)))), ((int)(((byte)(3)))));
             this.enterButton.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(133)))), ((int)(((byte)(8)))));
             this.enterButton.StatePressed.Back.ColorAngle = 45F;
@@ -209,17 +211,17 @@
             this.enterButton.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             this.enterButton.StateTracking.Border.Rounding = 10;
             this.enterButton.StateTracking.Border.Width = 1;
-            this.enterButton.TabIndex = 1;
+            this.enterButton.TabIndex = 4;
             this.enterButton.Values.Text = "Войти";
             this.enterButton.Click += new System.EventHandler(this.enterButton_Click);
             // 
             // newAccounLabel
             // 
-            this.newAccounLabel.Location = new System.Drawing.Point(100, 506);
+            this.newAccounLabel.Location = new System.Drawing.Point(92, 506);
             this.newAccounLabel.Name = "newAccounLabel";
-            this.newAccounLabel.Size = new System.Drawing.Size(101, 22);
+            this.newAccounLabel.Size = new System.Drawing.Size(99, 21);
             this.newAccounLabel.StateCommon.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(209)))), ((int)(((byte)(217)))));
-            this.newAccounLabel.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.newAccounLabel.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.newAccounLabel.TabIndex = 0;
             this.newAccounLabel.TabStop = false;
             this.newAccounLabel.Values.Text = "Нет аккаунта?";
@@ -230,10 +232,10 @@
             this.loginToSignUp_link.AutoSize = true;
             this.loginToSignUp_link.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginToSignUp_link.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(127)))), ((int)(((byte)(38)))));
-            this.loginToSignUp_link.Location = new System.Drawing.Point(196, 506);
+            this.loginToSignUp_link.Location = new System.Drawing.Point(187, 506);
             this.loginToSignUp_link.Name = "loginToSignUp_link";
             this.loginToSignUp_link.Size = new System.Drawing.Size(140, 19);
-            this.loginToSignUp_link.TabIndex = 4;
+            this.loginToSignUp_link.TabIndex = 1;
             this.loginToSignUp_link.TabStop = true;
             this.loginToSignUp_link.Text = "Зарегистрироваться";
             this.loginToSignUp_link.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(74)))), ((int)(((byte)(26)))));
@@ -242,7 +244,7 @@
             // logoPic
             // 
             this.logoPic.Image = global::project.Properties.Resources.ATFBank_Logo;
-            this.logoPic.Location = new System.Drawing.Point(100, 100);
+            this.logoPic.Location = new System.Drawing.Point(92, 100);
             this.logoPic.Name = "logoPic";
             this.logoPic.Size = new System.Drawing.Size(300, 100);
             this.logoPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

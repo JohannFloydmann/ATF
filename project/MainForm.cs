@@ -56,6 +56,8 @@ namespace project
             else
             {
                 this.Hide();
+                Program.addForm.actionLabel.Text = "Пополнение";
+                Program.addForm.actionLabel.Location = new Point(77, 22);
                 Program.addForm.Show();
             }
         }
@@ -73,6 +75,8 @@ namespace project
             else
             {
                 this.Hide();
+                Program.addForm.actionLabel.Text = "Снятие";
+                Program.addForm.actionLabel.Location = new Point(145, 22);
                 Program.addForm.Show();
             }
         }

@@ -44,8 +44,9 @@ namespace project.MainFormFunctions
             // 
             this.LoginForm_palette.ButtonSpecs.FormClose.Image = global::project.Properties.Resources.mc_red;
             this.LoginForm_palette.ButtonSpecs.FormClose.ImageStates.ImagePressed = global::project.Properties.Resources.mc_red;
-            this.LoginForm_palette.ButtonSpecs.FormClose.ImageStates.ImageTracking = global::project.Properties.Resources.mc_red;
+            this.LoginForm_palette.ButtonSpecs.FormClose.ImageStates.ImageTracking = global::project.Properties.Resources.sign_error_icon;
             this.LoginForm_palette.ButtonSpecs.FormClose.Orientation = ComponentFactory.Krypton.Toolkit.PaletteButtonOrientation.Auto;
+            this.LoginForm_palette.ButtonSpecs.FormClose.Style = ComponentFactory.Krypton.Toolkit.PaletteButtonStyle.Form;
             this.LoginForm_palette.ButtonSpecs.FormMax.Image = global::project.Properties.Resources.mc_green;
             this.LoginForm_palette.ButtonSpecs.FormMax.ImageStates.ImagePressed = global::project.Properties.Resources.mc_green;
             this.LoginForm_palette.ButtonSpecs.FormMax.ImageStates.ImageTracking = global::project.Properties.Resources.mc_green;
@@ -99,7 +100,7 @@ namespace project.MainFormFunctions
             // signUpLabel
             // 
             this.signUpLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.signUpLabel.Location = new System.Drawing.Point(121, 106);
+            this.signUpLabel.Location = new System.Drawing.Point(123, 106);
             this.signUpLabel.Name = "signUpLabel";
             this.signUpLabel.Size = new System.Drawing.Size(237, 70);
             this.signUpLabel.StateCommon.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(102)))), ((int)(((byte)(38)))));
@@ -107,6 +108,7 @@ namespace project.MainFormFunctions
             this.signUpLabel.StateCommon.ShortText.ColorAngle = 45F;
             this.signUpLabel.StateCommon.ShortText.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Linear;
             this.signUpLabel.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI Black", 35F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.signUpLabel.StateCommon.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAliasGridFit;
             this.signUpLabel.TabIndex = 5;
             this.signUpLabel.Values.Text = "Перевод";
             this.signUpLabel.Paint += new System.Windows.Forms.PaintEventHandler(this.signUpLabel_Paint);
@@ -126,7 +128,7 @@ namespace project.MainFormFunctions
             // transferAcceptButton
             // 
             this.transferAcceptButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.transferAcceptButton.Location = new System.Drawing.Point(86, 489);
+            this.transferAcceptButton.Location = new System.Drawing.Point(88, 489);
             this.transferAcceptButton.Name = "transferAcceptButton";
             this.transferAcceptButton.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(74)))), ((int)(((byte)(26)))));
             this.transferAcceptButton.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(183)))), ((int)(((byte)(51)))));
@@ -158,6 +160,7 @@ namespace project.MainFormFunctions
             this.transferAcceptButton.StateCommon.Border.Width = 1;
             this.transferAcceptButton.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(34)))), ((int)(((byte)(65)))));
             this.transferAcceptButton.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Black", 15F, System.Drawing.FontStyle.Bold);
+            this.transferAcceptButton.StateCommon.Content.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAliasGridFit;
             this.transferAcceptButton.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(40)))), ((int)(((byte)(3)))));
             this.transferAcceptButton.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(133)))), ((int)(((byte)(8)))));
             this.transferAcceptButton.StatePressed.Back.ColorAngle = 45F;
@@ -184,13 +187,13 @@ namespace project.MainFormFunctions
             this.transferAcceptButton.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             this.transferAcceptButton.StateTracking.Border.Rounding = 10;
             this.transferAcceptButton.StateTracking.Border.Width = 1;
-            this.transferAcceptButton.TabIndex = 11;
+            this.transferAcceptButton.TabIndex = 0;
             this.transferAcceptButton.Values.Text = "Подтвердить";
             this.transferAcceptButton.Click += new System.EventHandler(this.transferAcceptButton_Click);
             // 
             // transferAmountField
             // 
-            this.transferAmountField.Location = new System.Drawing.Point(86, 398);
+            this.transferAmountField.Location = new System.Drawing.Point(88, 398);
             this.transferAmountField.MaxLength = 20;
             this.transferAmountField.Name = "transferAmountField";
             this.transferAmountField.Size = new System.Drawing.Size(308, 43);
@@ -208,14 +211,14 @@ namespace project.MainFormFunctions
             this.transferAmountField.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(135)))), ((int)(((byte)(39)))));
             this.transferAmountField.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.transferAmountField.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
-            this.transferAmountField.TabIndex = 13;
+            this.transferAmountField.TabIndex = 2;
             this.transferAmountField.Text = "Сумма";
             this.transferAmountField.Enter += new System.EventHandler(this.transferAmountField_Enter);
             this.transferAmountField.Leave += new System.EventHandler(this.transferAmountField_Leave);
             // 
             // receiverPhoneNumberTextBox
             // 
-            this.receiverPhoneNumberTextBox.Location = new System.Drawing.Point(86, 343);
+            this.receiverPhoneNumberTextBox.Location = new System.Drawing.Point(88, 343);
             this.receiverPhoneNumberTextBox.MaxLength = 30;
             this.receiverPhoneNumberTextBox.Name = "receiverPhoneNumberTextBox";
             this.receiverPhoneNumberTextBox.Size = new System.Drawing.Size(308, 43);
@@ -233,7 +236,7 @@ namespace project.MainFormFunctions
             this.receiverPhoneNumberTextBox.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(135)))), ((int)(((byte)(39)))));
             this.receiverPhoneNumberTextBox.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Bold);
             this.receiverPhoneNumberTextBox.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
-            this.receiverPhoneNumberTextBox.TabIndex = 12;
+            this.receiverPhoneNumberTextBox.TabIndex = 1;
             this.receiverPhoneNumberTextBox.Text = "Номер получателя";
             this.receiverPhoneNumberTextBox.Enter += new System.EventHandler(this.receiverPhoneNumberTextBox_Enter);
             this.receiverPhoneNumberTextBox.Leave += new System.EventHandler(this.receiverPhoneNumberTextBox_Leave);

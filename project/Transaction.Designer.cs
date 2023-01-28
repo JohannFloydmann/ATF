@@ -49,7 +49,7 @@
             // 
             // moneyLabel
             // 
-            this.moneyLabel.Location = new System.Drawing.Point(237, 27);
+            this.moneyLabel.Location = new System.Drawing.Point(233, 29);
             this.moneyLabel.Name = "moneyLabel";
             this.moneyLabel.Size = new System.Drawing.Size(105, 41);
             this.moneyLabel.StateCommon.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(134)))), ((int)(((byte)(255)))));
@@ -57,6 +57,7 @@
             this.moneyLabel.StateCommon.ShortText.ColorAngle = 45F;
             this.moneyLabel.StateCommon.ShortText.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Linear;
             this.moneyLabel.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI Black", 20F, System.Drawing.FontStyle.Bold);
+            this.moneyLabel.StateCommon.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAliasGridFit;
             this.moneyLabel.StateCommon.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.moneyLabel.StateCommon.ShortText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.moneyLabel.TabIndex = 10;
@@ -81,7 +82,7 @@
             // 
             // nameLabel
             // 
-            this.nameLabel.Location = new System.Drawing.Point(93, 43);
+            this.nameLabel.Location = new System.Drawing.Point(85, 43);
             this.nameLabel.Name = "nameLabel";
             this.nameLabel.Size = new System.Drawing.Size(126, 35);
             this.nameLabel.StateCommon.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(74)))), ((int)(((byte)(26)))));
@@ -89,6 +90,7 @@
             this.nameLabel.StateCommon.ShortText.ColorAngle = 45F;
             this.nameLabel.StateCommon.ShortText.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Linear;
             this.nameLabel.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI Black", 17F, System.Drawing.FontStyle.Bold);
+            this.nameLabel.StateCommon.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAliasGridFit;
             this.nameLabel.StateCommon.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.nameLabel.StateCommon.ShortText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.nameLabel.TabIndex = 8;
@@ -97,7 +99,7 @@
             // 
             // phoneLabel
             // 
-            this.phoneLabel.Location = new System.Drawing.Point(96, 23);
+            this.phoneLabel.Location = new System.Drawing.Point(88, 23);
             this.phoneLabel.Name = "phoneLabel";
             this.phoneLabel.Size = new System.Drawing.Size(115, 26);
             this.phoneLabel.StateCommon.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(134)))), ((int)(((byte)(255)))));
@@ -105,6 +107,7 @@
             this.phoneLabel.StateCommon.ShortText.ColorAngle = 45F;
             this.phoneLabel.StateCommon.ShortText.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Linear;
             this.phoneLabel.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold);
+            this.phoneLabel.StateCommon.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAliasGridFit;
             this.phoneLabel.StateCommon.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.phoneLabel.StateCommon.ShortText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.phoneLabel.TabIndex = 7;
