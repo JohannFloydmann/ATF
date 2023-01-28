@@ -88,5 +88,10 @@ namespace project
         {
 
         }
+
+        private void LoginForm_palette_PalettePaint(object sender, PaletteLayoutEventArgs e)
+        {
+
+        }
     }
 }

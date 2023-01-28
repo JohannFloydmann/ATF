@@ -113,6 +113,16 @@ namespace project.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap greenArrowDone {
+            get {
+                object obj = ResourceManager.GetObject("greenArrowDone", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap max_btn_demo {
             get {
                 object obj = ResourceManager.GetObject("max-btn-demo", resourceCulture);
@@ -166,6 +176,16 @@ namespace project.Properties {
         internal static System.Drawing.Bitmap Programming_Delete_Sign_icon {
             get {
                 object obj = ResourceManager.GetObject("Programming-Delete-Sign-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap redArrowDone {
+            get {
+                object obj = ResourceManager.GetObject("redArrowDone", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

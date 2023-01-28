@@ -25,9 +25,7 @@ namespace project
             LoginForm.adapter.SelectCommand = cmd;
 
             LoginForm.adapter.SelectCommand = cmd;
-            LoginForm.adapter.Fill(LoginForm.userDataTable);*/
-            
-            
+            LoginForm.adapter.Fill(LoginForm.userDataTable*/
             
             InitializeComponent();
         }
@@ -36,26 +34,6 @@ namespace project
         private bool _isOutFormOpened = false;
 
         private void LoginForm_palette_PalettePaint(object sender, PaletteLayoutEventArgs e)
-        {
-
-        }
-
-        private void kryptonPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void kryptonLabel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void moneyLabel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void kryptonLabel1_Paint_1(object sender, PaintEventArgs e)
         {
 
         }
@@ -77,6 +55,7 @@ namespace project
             }
             else
             {
+                this.Hide();
                 Program.addForm.Show();
             }
         }
@@ -93,6 +72,7 @@ namespace project
             }
             else
             {
+                this.Hide();
                 Program.addForm.Show();
             }
         }
@@ -109,11 +89,6 @@ namespace project
             Application.Exit();
         }
 
-        private void nameLabel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void MainForm_Activated(object sender, EventArgs e)
         {
             LoginForm.dataBase.GetData();
@@ -126,6 +101,17 @@ namespace project
             Program.loginForm.passwordField.UseSystemPasswordChar = false;
             this.Hide();
             Program.loginForm.Show();
+        }
+        private void historyButton_Click(object sender, EventArgs e)
+        {
+            Program.historyForm = new HistoryForm();
+            Program.historyForm.Show();
+            this.Hide();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            nameLabel.TextAlign = ContentAlignment.MiddleCenter;
         }
     }
 }

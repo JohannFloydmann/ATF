@@ -32,15 +32,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.MainForm_palette = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.infoPanel = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.nameLabel = new System.Windows.Forms.Label();
             this.moneyLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.increasedMoneyLabel = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.decreasedMoneyLabel = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.nameLabel = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.moneyLabel = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.numberLabel = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.transferButton = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.outButton = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.addButton = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.historyLabel = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.backArrowPicture = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.infoPanel)).BeginInit();
             this.infoPanel.SuspendLayout();
@@ -106,8 +107,8 @@
             // 
             // infoPanel
             // 
-            this.infoPanel.Controls.Add(this.moneyLayoutPanel);
             this.infoPanel.Controls.Add(this.nameLabel);
+            this.infoPanel.Controls.Add(this.moneyLayoutPanel);
             this.infoPanel.Controls.Add(this.moneyLabel);
             this.infoPanel.Controls.Add(this.numberLabel);
             this.infoPanel.Dock = System.Windows.Forms.DockStyle.Top;
@@ -120,7 +121,18 @@
             this.infoPanel.StateCommon.ColorAngle = 20F;
             this.infoPanel.StateCommon.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Linear;
             this.infoPanel.TabIndex = 0;
-            this.infoPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.kryptonPanel1_Paint);
+            // 
+            // nameLabel
+            // 
+            this.nameLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.nameLabel.BackColor = System.Drawing.Color.Transparent;
+            this.nameLabel.Font = new System.Drawing.Font("Segoe UI Black", 24F, System.Drawing.FontStyle.Bold);
+            this.nameLabel.ForeColor = System.Drawing.Color.White;
+            this.nameLabel.Location = new System.Drawing.Point(12, 65);
+            this.nameLabel.Name = "nameLabel";
+            this.nameLabel.Size = new System.Drawing.Size(460, 45);
+            this.nameLabel.TabIndex = 3;
+            this.nameLabel.Text = "label1";
             // 
             // moneyLayoutPanel
             // 
@@ -162,47 +174,33 @@
             this.decreasedMoneyLabel.TabIndex = 4;
             this.decreasedMoneyLabel.Values.Text = "↓5000";
             // 
-            // nameLabel
-            // 
-            this.nameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.nameLabel.Location = new System.Drawing.Point(100, 68);
-            this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(312, 45);
-            this.nameLabel.StateCommon.ShortText.Color1 = System.Drawing.Color.White;
-            this.nameLabel.StateCommon.ShortText.Font = new System.Drawing.Font("Roboto", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.nameLabel.TabIndex = 2;
-            this.nameLabel.Values.Text = "u_ name u_surname";
-            this.nameLabel.Paint += new System.Windows.Forms.PaintEventHandler(this.nameLabel_Paint);
-            // 
             // moneyLabel
             // 
             this.moneyLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.moneyLabel.Location = new System.Drawing.Point(36, 134);
+            this.moneyLabel.Location = new System.Drawing.Point(36, 123);
             this.moneyLabel.Margin = new System.Windows.Forms.Padding(0);
             this.moneyLabel.Name = "moneyLabel";
-            this.moneyLabel.Size = new System.Drawing.Size(316, 47);
+            this.moneyLabel.Size = new System.Drawing.Size(352, 51);
             this.moneyLabel.StateCommon.ShortText.Color1 = System.Drawing.Color.White;
-            this.moneyLabel.StateCommon.ShortText.Font = new System.Drawing.Font("Roboto", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.moneyLabel.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI Black", 25F, System.Drawing.FontStyle.Bold);
             this.moneyLabel.TabIndex = 1;
             this.moneyLabel.Values.Text = "₸ [u_currentMoney]";
-            this.moneyLabel.Paint += new System.Windows.Forms.PaintEventHandler(this.moneyLabel_Paint);
             // 
             // numberLabel
             // 
             this.numberLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.numberLabel.Location = new System.Drawing.Point(177, 12);
+            this.numberLabel.Location = new System.Drawing.Point(177, 8);
             this.numberLabel.Name = "numberLabel";
-            this.numberLabel.Size = new System.Drawing.Size(155, 27);
+            this.numberLabel.Size = new System.Drawing.Size(169, 30);
             this.numberLabel.StateCommon.ShortText.Color1 = System.Drawing.Color.White;
-            this.numberLabel.StateCommon.ShortText.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.numberLabel.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI Black", 14F, System.Drawing.FontStyle.Bold);
             this.numberLabel.TabIndex = 0;
             this.numberLabel.Values.Text = "u_phoneNumber";
-            this.numberLabel.Paint += new System.Windows.Forms.PaintEventHandler(this.kryptonLabel1_Paint);
             // 
             // transferButton
             // 
             this.transferButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.transferButton.Location = new System.Drawing.Point(156, 513);
+            this.transferButton.Location = new System.Drawing.Point(155, 529);
             this.transferButton.Name = "transferButton";
             this.transferButton.OverrideDefault.Back.Color1 = System.Drawing.Color.Transparent;
             this.transferButton.OverrideDefault.Back.Color2 = System.Drawing.Color.Transparent;
@@ -215,7 +213,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.transferButton.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             this.transferButton.OverrideDefault.Border.Rounding = 10;
-            this.transferButton.OverrideDefault.Border.Width = 2;
+            this.transferButton.OverrideDefault.Border.Width = 3;
             this.transferButton.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(74)))), ((int)(((byte)(26)))));
             this.transferButton.OverrideDefault.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(167)))), ((int)(((byte)(81)))));
             this.transferButton.OverrideDefault.Content.ShortText.ColorAngle = 45F;
@@ -234,12 +232,12 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.transferButton.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             this.transferButton.StateCommon.Border.Rounding = 10;
-            this.transferButton.StateCommon.Border.Width = 2;
+            this.transferButton.StateCommon.Border.Width = 3;
             this.transferButton.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(74)))), ((int)(((byte)(26)))));
             this.transferButton.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(183)))), ((int)(((byte)(51)))));
             this.transferButton.StateCommon.Content.ShortText.ColorAngle = 45F;
             this.transferButton.StateCommon.Content.ShortText.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Linear;
-            this.transferButton.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.transferButton.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
             this.transferButton.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(57)))), ((int)(((byte)(4)))));
             this.transferButton.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(175)))), ((int)(((byte)(35)))));
             this.transferButton.StatePressed.Back.ColorAngle = 45F;
@@ -277,7 +275,7 @@
             // 
             this.outButton.AutoSize = true;
             this.outButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.outButton.Location = new System.Drawing.Point(145, 407);
+            this.outButton.Location = new System.Drawing.Point(141, 418);
             this.outButton.Name = "outButton";
             this.outButton.OverrideDefault.Back.Color1 = System.Drawing.Color.Transparent;
             this.outButton.OverrideDefault.Back.Color2 = System.Drawing.Color.Transparent;
@@ -296,7 +294,7 @@
             this.outButton.OverrideDefault.Content.ShortText.ColorAngle = 45F;
             this.outButton.OverrideDefault.Content.ShortText.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Linear;
             this.outButton.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.outButton.Size = new System.Drawing.Size(196, 78);
+            this.outButton.Size = new System.Drawing.Size(204, 78);
             this.outButton.StateCommon.Back.Color1 = System.Drawing.Color.Transparent;
             this.outButton.StateCommon.Back.Color2 = System.Drawing.Color.Transparent;
             this.outButton.StateCommon.Back.ColorAngle = 45F;
@@ -314,7 +312,7 @@
             this.outButton.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(183)))), ((int)(((byte)(51)))));
             this.outButton.StateCommon.Content.ShortText.ColorAngle = 45F;
             this.outButton.StateCommon.Content.ShortText.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Linear;
-            this.outButton.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.outButton.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
             this.outButton.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(57)))), ((int)(((byte)(4)))));
             this.outButton.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(175)))), ((int)(((byte)(35)))));
             this.outButton.StatePressed.Back.ColorAngle = 45F;
@@ -344,14 +342,14 @@
             this.outButton.StateTracking.Border.Width = 2;
             this.outButton.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(57)))), ((int)(((byte)(4)))));
             this.outButton.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(167)))), ((int)(((byte)(10)))));
-            this.outButton.TabIndex = 3;
+            this.outButton.TabIndex = 1;
             this.outButton.Values.Text = "Снятие наличных";
             this.outButton.Click += new System.EventHandler(this.outButton_Click);
             // 
             // addButton
             // 
             this.addButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.addButton.Location = new System.Drawing.Point(156, 290);
+            this.addButton.Location = new System.Drawing.Point(155, 306);
             this.addButton.Name = "addButton";
             this.addButton.OverrideDefault.Back.Color1 = System.Drawing.Color.Transparent;
             this.addButton.OverrideDefault.Back.Color2 = System.Drawing.Color.Transparent;
@@ -364,7 +362,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.addButton.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             this.addButton.OverrideDefault.Border.Rounding = 10;
-            this.addButton.OverrideDefault.Border.Width = 2;
+            this.addButton.OverrideDefault.Border.Width = 3;
             this.addButton.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(74)))), ((int)(((byte)(26)))));
             this.addButton.OverrideDefault.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(167)))), ((int)(((byte)(81)))));
             this.addButton.OverrideDefault.Content.ShortText.ColorAngle = 45F;
@@ -388,7 +386,7 @@
             this.addButton.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(183)))), ((int)(((byte)(51)))));
             this.addButton.StateCommon.Content.ShortText.ColorAngle = 45F;
             this.addButton.StateCommon.Content.ShortText.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Linear;
-            this.addButton.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.addButton.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
             this.addButton.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(57)))), ((int)(((byte)(4)))));
             this.addButton.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(175)))), ((int)(((byte)(35)))));
             this.addButton.StatePressed.Back.ColorAngle = 45F;
@@ -418,9 +416,25 @@
             this.addButton.StateTracking.Border.Width = 2;
             this.addButton.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(57)))), ((int)(((byte)(4)))));
             this.addButton.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(167)))), ((int)(((byte)(10)))));
-            this.addButton.TabIndex = 4;
+            this.addButton.TabIndex = 0;
             this.addButton.Values.Text = "Пополнение";
             this.addButton.Click += new System.EventHandler(this.addButton_Click);
+            // 
+            // historyLabel
+            // 
+            this.historyLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.historyLabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.historyLabel.Location = new System.Drawing.Point(360, 227);
+            this.historyLabel.Name = "historyLabel";
+            this.historyLabel.Size = new System.Drawing.Size(103, 32);
+            this.historyLabel.StateCommon.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(74)))), ((int)(((byte)(26)))));
+            this.historyLabel.StateCommon.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(183)))), ((int)(((byte)(51)))));
+            this.historyLabel.StateCommon.ShortText.ColorAngle = 45F;
+            this.historyLabel.StateCommon.ShortText.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Linear;
+            this.historyLabel.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI Black", 15F, System.Drawing.FontStyle.Bold);
+            this.historyLabel.TabIndex = 3;
+            this.historyLabel.Values.Text = "История";
+            this.historyLabel.Click += new System.EventHandler(this.historyButton_Click);
             // 
             // backArrowPicture
             // 
@@ -440,6 +454,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
             this.ClientSize = new System.Drawing.Size(484, 661);
+            this.Controls.Add(this.historyLabel);
             this.Controls.Add(this.backArrowPicture);
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.outButton);
@@ -454,6 +469,7 @@
             this.Text = "ATF Bank";
             this.Activated += new System.EventHandler(this.MainForm_Activated);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
+            this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.infoPanel)).EndInit();
             this.infoPanel.ResumeLayout(false);
             this.infoPanel.PerformLayout();
@@ -474,10 +490,11 @@
         private System.Windows.Forms.FlowLayoutPanel moneyLayoutPanel;
         internal ComponentFactory.Krypton.Toolkit.KryptonLabel increasedMoneyLabel;
         internal ComponentFactory.Krypton.Toolkit.KryptonLabel decreasedMoneyLabel;
-        internal ComponentFactory.Krypton.Toolkit.KryptonLabel nameLabel;
         private ComponentFactory.Krypton.Toolkit.KryptonButton transferButton;
         private ComponentFactory.Krypton.Toolkit.KryptonButton outButton;
         private ComponentFactory.Krypton.Toolkit.KryptonButton addButton;
         private System.Windows.Forms.PictureBox backArrowPicture;
+        internal ComponentFactory.Krypton.Toolkit.KryptonLabel historyLabel;
+        internal System.Windows.Forms.Label nameLabel;
     }
 }

@@ -24,25 +24,10 @@ namespace project.MainFormFunctions
             Application.Exit();
         }
 
-        private void choiceDropButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void kryptonContextMenu1_Opening(object sender, CancelEventArgs e)
-        {
-
-        }
-
         private void backArrowPicture_Click(object sender, EventArgs e)
         {
             this.Hide();
             Program.mainForm.Show();
-        }
-
-        private void transferAmountField_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void transferAmountField_Leave(object sender, EventArgs e)
@@ -53,11 +38,6 @@ namespace project.MainFormFunctions
         private void transferAmountField_Enter(object sender, EventArgs e)
         {
             TextBoxHint.HideHint(transferAmountField, Check._addOwnDefault);
-        }
-
-        private void receiverPhoneNumberTextBox_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void receiverPhoneNumberTextBox_Leave(object sender, EventArgs e)

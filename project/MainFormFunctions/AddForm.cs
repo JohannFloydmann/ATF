@@ -18,11 +18,20 @@ namespace project.MainFormFunctions
         {
             InitializeComponent();
             _isIncrease = isIncrease;
+            if (_isIncrease)
+            {
+                actionLabel.Text = "Пополнение";
+                actionLabel.Location = new Point(77, 20);
+            }
+            else
+            {
+                actionLabel.Text = "Снятие";
+                actionLabel.Location = new Point(142, 20);
+            }
         }
 
         private void add1000Button_Click(object sender, EventArgs e)
-        {
-            //реализовать пополнение u_currentmoney и u_increasedMoney 
+        { 
             Program.mainForm.Show();
             this.Hide();
             if (_isIncrease == true)

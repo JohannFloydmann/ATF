@@ -95,13 +95,14 @@
             this.LoginForm_palette.HeaderStyles.HeaderForm.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.LoginForm_palette.HeaderStyles.HeaderForm.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.LoginForm_palette.HeaderStyles.HeaderForm.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LoginForm_palette.PalettePaint += new System.EventHandler<ComponentFactory.Krypton.Toolkit.PaletteLayoutEventArgs>(this.LoginForm_palette_PalettePaint);
             // 
             // loginField
             // 
             this.loginField.Location = new System.Drawing.Point(100, 330);
             this.loginField.MaxLength = 30;
             this.loginField.Name = "loginField";
-            this.loginField.Size = new System.Drawing.Size(300, 45);
+            this.loginField.Size = new System.Drawing.Size(300, 43);
             this.loginField.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(34)))), ((int)(((byte)(65)))));
             this.loginField.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(102)))), ((int)(((byte)(38)))));
             this.loginField.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(135)))), ((int)(((byte)(39)))));
@@ -114,7 +115,7 @@
             this.loginField.StateCommon.Border.Rounding = 10;
             this.loginField.StateCommon.Border.Width = 2;
             this.loginField.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(135)))), ((int)(((byte)(39)))));
-            this.loginField.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.loginField.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Bold);
             this.loginField.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
             this.loginField.TabIndex = 2;
             this.loginField.Text = "Логин";
@@ -127,7 +128,7 @@
             this.passwordField.Location = new System.Drawing.Point(100, 385);
             this.passwordField.MaxLength = 20;
             this.passwordField.Name = "passwordField";
-            this.passwordField.Size = new System.Drawing.Size(300, 45);
+            this.passwordField.Size = new System.Drawing.Size(300, 43);
             this.passwordField.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(34)))), ((int)(((byte)(65)))));
             this.passwordField.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(102)))), ((int)(((byte)(38)))));
             this.passwordField.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(135)))), ((int)(((byte)(39)))));
@@ -140,7 +141,7 @@
             this.passwordField.StateCommon.Border.Rounding = 10;
             this.passwordField.StateCommon.Border.Width = 2;
             this.passwordField.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(135)))), ((int)(((byte)(39)))));
-            this.passwordField.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.passwordField.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Bold);
             this.passwordField.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
             this.passwordField.TabIndex = 3;
             this.passwordField.Text = "Пароль";
@@ -181,7 +182,7 @@
             this.enterButton.StateCommon.Border.Rounding = 10;
             this.enterButton.StateCommon.Border.Width = 1;
             this.enterButton.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(34)))), ((int)(((byte)(65)))));
-            this.enterButton.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.enterButton.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Black", 15F, System.Drawing.FontStyle.Bold);
             this.enterButton.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(40)))), ((int)(((byte)(3)))));
             this.enterButton.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(133)))), ((int)(((byte)(8)))));
             this.enterButton.StatePressed.Back.ColorAngle = 45F;

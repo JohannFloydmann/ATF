@@ -13,16 +13,6 @@ namespace project
             InitializeComponent();
         }
 
-        private void passwordField_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void loginField_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void loginField_Enter(object sender, EventArgs e)
         {
             TextBoxHint.HideHint(loginField, Check._loginDefault);
@@ -41,11 +31,6 @@ namespace project
         private void passwordField_Leave(object sender, EventArgs e)
         {
             TextBoxHint.ShowHint(passwordField);
-        }
-
-        private void nameField_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void nameField_Enter(object sender, EventArgs e)
@@ -127,19 +112,14 @@ namespace project
             Program.loginForm.Show();
         }
 
-        private void signUpLabel_Leave(object sender, EventArgs e)
-        {
-            MessageBox.Show("Вы уверены?");
-        }
-
-        private void SignUp_palette_PalettePaint(object sender, PaletteLayoutEventArgs e)
-        {
-
-        }
-
         private void SignUpForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void SignUpForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

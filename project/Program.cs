@@ -9,11 +9,14 @@ namespace project
 {
     internal static class Program
     {
+        public static string AtmName = "ATM 0001";
+
         public static LoginForm loginForm;
         public static SignUpForm signUpForm;
         public static MainForm mainForm;
         public static AddForm addForm;
         public static TransferForm transferForm;
+        public static HistoryForm historyForm;
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>

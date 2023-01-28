@@ -98,7 +98,6 @@
             this.SignUp_palette.HeaderStyles.HeaderForm.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.SignUp_palette.HeaderStyles.HeaderForm.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.SignUp_palette.HeaderStyles.HeaderForm.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.SignUp_palette.PalettePaint += new System.EventHandler<ComponentFactory.Krypton.Toolkit.PaletteLayoutEventArgs>(this.SignUp_palette_PalettePaint);
             // 
             // loginField
             // 
@@ -106,7 +105,7 @@
             this.loginField.Location = new System.Drawing.Point(100, 377);
             this.loginField.MaxLength = 30;
             this.loginField.Name = "loginField";
-            this.loginField.Size = new System.Drawing.Size(300, 45);
+            this.loginField.Size = new System.Drawing.Size(300, 43);
             this.loginField.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(34)))), ((int)(((byte)(65)))));
             this.loginField.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(102)))), ((int)(((byte)(38)))));
             this.loginField.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(135)))), ((int)(((byte)(39)))));
@@ -119,11 +118,10 @@
             this.loginField.StateCommon.Border.Rounding = 10;
             this.loginField.StateCommon.Border.Width = 2;
             this.loginField.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(135)))), ((int)(((byte)(39)))));
-            this.loginField.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.loginField.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Bold);
             this.loginField.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
             this.loginField.TabIndex = 6;
             this.loginField.Text = "Логин";
-            this.loginField.TextChanged += new System.EventHandler(this.loginField_TextChanged);
             this.loginField.Enter += new System.EventHandler(this.loginField_Enter);
             this.loginField.Leave += new System.EventHandler(this.loginField_Leave);
             // 
@@ -133,7 +131,7 @@
             this.passwordField.Location = new System.Drawing.Point(100, 428);
             this.passwordField.MaxLength = 20;
             this.passwordField.Name = "passwordField";
-            this.passwordField.Size = new System.Drawing.Size(300, 45);
+            this.passwordField.Size = new System.Drawing.Size(300, 43);
             this.passwordField.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(34)))), ((int)(((byte)(65)))));
             this.passwordField.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(102)))), ((int)(((byte)(38)))));
             this.passwordField.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(135)))), ((int)(((byte)(39)))));
@@ -146,11 +144,10 @@
             this.passwordField.StateCommon.Border.Rounding = 10;
             this.passwordField.StateCommon.Border.Width = 2;
             this.passwordField.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(135)))), ((int)(((byte)(39)))));
-            this.passwordField.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.passwordField.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Bold);
             this.passwordField.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
             this.passwordField.TabIndex = 7;
             this.passwordField.Text = "Пароль";
-            this.passwordField.TextChanged += new System.EventHandler(this.passwordField_TextChanged);
             this.passwordField.Enter += new System.EventHandler(this.passwordField_Enter);
             this.passwordField.Leave += new System.EventHandler(this.passwordField_Leave);
             // 
@@ -167,7 +164,6 @@
             this.signUpLabel.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI Black", 35F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signUpLabel.TabIndex = 4;
             this.signUpLabel.Values.Text = "Регистрация";
-            this.signUpLabel.Leave += new System.EventHandler(this.signUpLabel_Leave);
             // 
             // nameField
             // 
@@ -175,7 +171,7 @@
             this.nameField.Location = new System.Drawing.Point(100, 155);
             this.nameField.MaxLength = 30;
             this.nameField.Name = "nameField";
-            this.nameField.Size = new System.Drawing.Size(300, 45);
+            this.nameField.Size = new System.Drawing.Size(300, 43);
             this.nameField.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(34)))), ((int)(((byte)(65)))));
             this.nameField.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(102)))), ((int)(((byte)(38)))));
             this.nameField.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(135)))), ((int)(((byte)(39)))));
@@ -188,11 +184,10 @@
             this.nameField.StateCommon.Border.Rounding = 10;
             this.nameField.StateCommon.Border.Width = 2;
             this.nameField.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(135)))), ((int)(((byte)(39)))));
-            this.nameField.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.nameField.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Bold);
             this.nameField.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
             this.nameField.TabIndex = 2;
             this.nameField.Text = "Имя";
-            this.nameField.TextChanged += new System.EventHandler(this.nameField_TextChanged);
             this.nameField.Enter += new System.EventHandler(this.nameField_Enter);
             this.nameField.Leave += new System.EventHandler(this.nameField_Leave);
             // 
@@ -202,7 +197,7 @@
             this.surnameField.Location = new System.Drawing.Point(100, 206);
             this.surnameField.MaxLength = 30;
             this.surnameField.Name = "surnameField";
-            this.surnameField.Size = new System.Drawing.Size(300, 45);
+            this.surnameField.Size = new System.Drawing.Size(300, 43);
             this.surnameField.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(34)))), ((int)(((byte)(65)))));
             this.surnameField.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(102)))), ((int)(((byte)(38)))));
             this.surnameField.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(135)))), ((int)(((byte)(39)))));
@@ -215,7 +210,7 @@
             this.surnameField.StateCommon.Border.Rounding = 10;
             this.surnameField.StateCommon.Border.Width = 2;
             this.surnameField.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(135)))), ((int)(((byte)(39)))));
-            this.surnameField.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.surnameField.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Bold);
             this.surnameField.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
             this.surnameField.TabIndex = 3;
             this.surnameField.Text = "Фамилия";
@@ -240,6 +235,8 @@
             this.enterButton.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             this.enterButton.OverrideDefault.Border.Rounding = 10;
             this.enterButton.OverrideDefault.Border.Width = 1;
+            this.enterButton.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(34)))), ((int)(((byte)(65)))));
+            this.enterButton.OverrideDefault.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Black", 15F, System.Drawing.FontStyle.Bold);
             this.enterButton.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
             this.enterButton.Size = new System.Drawing.Size(300, 65);
             this.enterButton.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(74)))), ((int)(((byte)(26)))));
@@ -256,7 +253,7 @@
             this.enterButton.StateCommon.Border.Rounding = 10;
             this.enterButton.StateCommon.Border.Width = 1;
             this.enterButton.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(34)))), ((int)(((byte)(65)))));
-            this.enterButton.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.enterButton.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Black", 15F, System.Drawing.FontStyle.Bold);
             this.enterButton.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(40)))), ((int)(((byte)(3)))));
             this.enterButton.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(133)))), ((int)(((byte)(8)))));
             this.enterButton.StatePressed.Back.ColorAngle = 45F;
@@ -293,7 +290,7 @@
             this.emailField.Location = new System.Drawing.Point(100, 266);
             this.emailField.MaxLength = 30;
             this.emailField.Name = "emailField";
-            this.emailField.Size = new System.Drawing.Size(300, 45);
+            this.emailField.Size = new System.Drawing.Size(300, 43);
             this.emailField.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(34)))), ((int)(((byte)(65)))));
             this.emailField.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(102)))), ((int)(((byte)(38)))));
             this.emailField.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(135)))), ((int)(((byte)(39)))));
@@ -306,7 +303,7 @@
             this.emailField.StateCommon.Border.Rounding = 10;
             this.emailField.StateCommon.Border.Width = 2;
             this.emailField.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(135)))), ((int)(((byte)(39)))));
-            this.emailField.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.emailField.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Bold);
             this.emailField.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
             this.emailField.TabIndex = 4;
             this.emailField.Text = "Email";
@@ -319,7 +316,7 @@
             this.numberField.Location = new System.Drawing.Point(100, 317);
             this.numberField.MaxLength = 11;
             this.numberField.Name = "numberField";
-            this.numberField.Size = new System.Drawing.Size(300, 45);
+            this.numberField.Size = new System.Drawing.Size(300, 43);
             this.numberField.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(34)))), ((int)(((byte)(65)))));
             this.numberField.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(102)))), ((int)(((byte)(38)))));
             this.numberField.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(135)))), ((int)(((byte)(39)))));
@@ -332,7 +329,7 @@
             this.numberField.StateCommon.Border.Rounding = 10;
             this.numberField.StateCommon.Border.Width = 2;
             this.numberField.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(135)))), ((int)(((byte)(39)))));
-            this.numberField.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.numberField.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Bold);
             this.numberField.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
             this.numberField.TabIndex = 5;
             this.numberField.Text = "Номер телефона";
@@ -374,6 +371,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ATF Bank";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SignUpForm_FormClosing);
+            this.Load += new System.EventHandler(this.SignUpForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.backArrowPicture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
