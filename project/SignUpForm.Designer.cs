@@ -47,8 +47,9 @@
             // 
             this.SignUp_palette.ButtonSpecs.FormClose.Image = global::project.Properties.Resources.mc_red;
             this.SignUp_palette.ButtonSpecs.FormClose.ImageStates.ImagePressed = global::project.Properties.Resources.mc_red;
-            this.SignUp_palette.ButtonSpecs.FormClose.ImageStates.ImageTracking = global::project.Properties.Resources.mc_red;
+            this.SignUp_palette.ButtonSpecs.FormClose.ImageStates.ImageTracking = global::project.Properties.Resources.sign_error_icon;
             this.SignUp_palette.ButtonSpecs.FormClose.Orientation = ComponentFactory.Krypton.Toolkit.PaletteButtonOrientation.Auto;
+            this.SignUp_palette.ButtonSpecs.FormClose.Style = ComponentFactory.Krypton.Toolkit.PaletteButtonStyle.Form;
             this.SignUp_palette.ButtonSpecs.FormMax.Image = global::project.Properties.Resources.mc_green;
             this.SignUp_palette.ButtonSpecs.FormMax.ImageStates.ImagePressed = global::project.Properties.Resources.mc_green;
             this.SignUp_palette.ButtonSpecs.FormMax.ImageStates.ImageTracking = global::project.Properties.Resources.mc_green;
@@ -102,7 +103,7 @@
             // loginField
             // 
             this.loginField.InputControlStyle = ComponentFactory.Krypton.Toolkit.InputControlStyle.Custom1;
-            this.loginField.Location = new System.Drawing.Point(100, 377);
+            this.loginField.Location = new System.Drawing.Point(93, 377);
             this.loginField.MaxLength = 30;
             this.loginField.Name = "loginField";
             this.loginField.Size = new System.Drawing.Size(300, 43);
@@ -120,7 +121,7 @@
             this.loginField.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(135)))), ((int)(((byte)(39)))));
             this.loginField.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Bold);
             this.loginField.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
-            this.loginField.TabIndex = 6;
+            this.loginField.TabIndex = 5;
             this.loginField.Text = "Логин";
             this.loginField.Enter += new System.EventHandler(this.loginField_Enter);
             this.loginField.Leave += new System.EventHandler(this.loginField_Leave);
@@ -128,7 +129,7 @@
             // passwordField
             // 
             this.passwordField.InputControlStyle = ComponentFactory.Krypton.Toolkit.InputControlStyle.Custom1;
-            this.passwordField.Location = new System.Drawing.Point(100, 428);
+            this.passwordField.Location = new System.Drawing.Point(93, 428);
             this.passwordField.MaxLength = 20;
             this.passwordField.Name = "passwordField";
             this.passwordField.Size = new System.Drawing.Size(300, 43);
@@ -146,7 +147,7 @@
             this.passwordField.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(135)))), ((int)(((byte)(39)))));
             this.passwordField.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Bold);
             this.passwordField.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
-            this.passwordField.TabIndex = 7;
+            this.passwordField.TabIndex = 6;
             this.passwordField.Text = "Пароль";
             this.passwordField.Enter += new System.EventHandler(this.passwordField_Enter);
             this.passwordField.Leave += new System.EventHandler(this.passwordField_Leave);
@@ -154,7 +155,7 @@
             // signUpLabel
             // 
             this.signUpLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.signUpLabel.Location = new System.Drawing.Point(84, 40);
+            this.signUpLabel.Location = new System.Drawing.Point(77, 40);
             this.signUpLabel.Name = "signUpLabel";
             this.signUpLabel.Size = new System.Drawing.Size(331, 70);
             this.signUpLabel.StateCommon.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(102)))), ((int)(((byte)(38)))));
@@ -162,13 +163,14 @@
             this.signUpLabel.StateCommon.ShortText.ColorAngle = 45F;
             this.signUpLabel.StateCommon.ShortText.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Linear;
             this.signUpLabel.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI Black", 35F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.signUpLabel.StateCommon.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAliasGridFit;
             this.signUpLabel.TabIndex = 4;
             this.signUpLabel.Values.Text = "Регистрация";
             // 
             // nameField
             // 
             this.nameField.InputControlStyle = ComponentFactory.Krypton.Toolkit.InputControlStyle.Custom1;
-            this.nameField.Location = new System.Drawing.Point(100, 155);
+            this.nameField.Location = new System.Drawing.Point(93, 155);
             this.nameField.MaxLength = 30;
             this.nameField.Name = "nameField";
             this.nameField.Size = new System.Drawing.Size(300, 43);
@@ -186,7 +188,7 @@
             this.nameField.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(135)))), ((int)(((byte)(39)))));
             this.nameField.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Bold);
             this.nameField.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
-            this.nameField.TabIndex = 2;
+            this.nameField.TabIndex = 1;
             this.nameField.Text = "Имя";
             this.nameField.Enter += new System.EventHandler(this.nameField_Enter);
             this.nameField.Leave += new System.EventHandler(this.nameField_Leave);
@@ -194,7 +196,7 @@
             // surnameField
             // 
             this.surnameField.InputControlStyle = ComponentFactory.Krypton.Toolkit.InputControlStyle.Custom1;
-            this.surnameField.Location = new System.Drawing.Point(100, 206);
+            this.surnameField.Location = new System.Drawing.Point(93, 206);
             this.surnameField.MaxLength = 30;
             this.surnameField.Name = "surnameField";
             this.surnameField.Size = new System.Drawing.Size(300, 43);
@@ -212,7 +214,7 @@
             this.surnameField.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(135)))), ((int)(((byte)(39)))));
             this.surnameField.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Bold);
             this.surnameField.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
-            this.surnameField.TabIndex = 3;
+            this.surnameField.TabIndex = 2;
             this.surnameField.Text = "Фамилия";
             this.surnameField.Enter += new System.EventHandler(this.surnameField_Enter);
             this.surnameField.Leave += new System.EventHandler(this.surnameField_Leave);
@@ -220,7 +222,7 @@
             // enterButton
             // 
             this.enterButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.enterButton.Location = new System.Drawing.Point(100, 534);
+            this.enterButton.Location = new System.Drawing.Point(93, 534);
             this.enterButton.Name = "enterButton";
             this.enterButton.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(74)))), ((int)(((byte)(26)))));
             this.enterButton.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(183)))), ((int)(((byte)(51)))));
@@ -254,6 +256,7 @@
             this.enterButton.StateCommon.Border.Width = 1;
             this.enterButton.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(34)))), ((int)(((byte)(65)))));
             this.enterButton.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Black", 15F, System.Drawing.FontStyle.Bold);
+            this.enterButton.StateCommon.Content.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAliasGridFit;
             this.enterButton.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(40)))), ((int)(((byte)(3)))));
             this.enterButton.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(133)))), ((int)(((byte)(8)))));
             this.enterButton.StatePressed.Back.ColorAngle = 45F;
@@ -280,14 +283,14 @@
             this.enterButton.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             this.enterButton.StateTracking.Border.Rounding = 10;
             this.enterButton.StateTracking.Border.Width = 1;
-            this.enterButton.TabIndex = 1;
+            this.enterButton.TabIndex = 0;
             this.enterButton.Values.Text = "Зарегистрироваться";
             this.enterButton.Click += new System.EventHandler(this.enterButton_Click);
             // 
             // emailField
             // 
             this.emailField.InputControlStyle = ComponentFactory.Krypton.Toolkit.InputControlStyle.Custom1;
-            this.emailField.Location = new System.Drawing.Point(100, 266);
+            this.emailField.Location = new System.Drawing.Point(93, 266);
             this.emailField.MaxLength = 30;
             this.emailField.Name = "emailField";
             this.emailField.Size = new System.Drawing.Size(300, 43);
@@ -305,7 +308,7 @@
             this.emailField.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(135)))), ((int)(((byte)(39)))));
             this.emailField.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Bold);
             this.emailField.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
-            this.emailField.TabIndex = 4;
+            this.emailField.TabIndex = 3;
             this.emailField.Text = "Email";
             this.emailField.Enter += new System.EventHandler(this.emailField_Enter);
             this.emailField.Leave += new System.EventHandler(this.emailField_Leave);
@@ -313,7 +316,7 @@
             // numberField
             // 
             this.numberField.InputControlStyle = ComponentFactory.Krypton.Toolkit.InputControlStyle.Custom1;
-            this.numberField.Location = new System.Drawing.Point(100, 317);
+            this.numberField.Location = new System.Drawing.Point(93, 317);
             this.numberField.MaxLength = 11;
             this.numberField.Name = "numberField";
             this.numberField.Size = new System.Drawing.Size(300, 43);
@@ -331,7 +334,7 @@
             this.numberField.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(135)))), ((int)(((byte)(39)))));
             this.numberField.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Bold);
             this.numberField.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
-            this.numberField.TabIndex = 5;
+            this.numberField.TabIndex = 4;
             this.numberField.Text = "Номер телефона";
             this.numberField.Enter += new System.EventHandler(this.numberField_Enter);
             this.numberField.Leave += new System.EventHandler(this.numberField_Leave);

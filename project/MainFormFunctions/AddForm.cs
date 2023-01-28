@@ -16,18 +16,8 @@ namespace project.MainFormFunctions
         internal static bool _isIncrease;
         public AddForm(bool isIncrease)
         {
-            InitializeComponent();
             _isIncrease = isIncrease;
-            if (_isIncrease)
-            {
-                actionLabel.Text = "Пополнение";
-                actionLabel.Location = new Point(77, 20);
-            }
-            else
-            {
-                actionLabel.Text = "Снятие";
-                actionLabel.Location = new Point(142, 20);
-            }
+            InitializeComponent();
         }
 
         private void add1000Button_Click(object sender, EventArgs e)
@@ -56,8 +46,7 @@ namespace project.MainFormFunctions
         }
 
         private void add5000Button_Click(object sender, EventArgs e)
-        {
-            //реализовать пополнение u_currentmoney и u_increasedMoney 
+        { 
             Program.mainForm.Show();
             this.Hide();
             if (_isIncrease == true)
@@ -68,7 +57,6 @@ namespace project.MainFormFunctions
 
         private void add10000Button_Click(object sender, EventArgs e)
         {
-            //реализовать пополнение u_currentmoney и u_increasedMoney 
             Program.mainForm.Show();
             this.Hide();
             if (_isIncrease == true)
@@ -79,18 +67,16 @@ namespace project.MainFormFunctions
 
         private void add50000Button_Click(object sender, EventArgs e)
         {
-            //реализовать пополнение u_currentmoney и u_increasedMoney 
             Program.mainForm.Show();
             this.Hide();
             if (_isIncrease == true)
-                LoginForm.dataBase.EditDataAdd(50000);
+                LoginForm.dataBase.EditDataAdd(20000);
             else
-                LoginForm.dataBase.EditDataOut(50000);
+                LoginForm.dataBase.EditDataOut(20000);
         }
 
         private void addOwnButton_Click(object sender, EventArgs e)
         {
-            //реализовать пополнение u_currentmoney и u_increasedMoney 
             Program.mainForm.Show();
             this.Hide();
             if (Int32.TryParse(Program.addForm.addOwnField.Text, out int sum))
@@ -106,6 +92,20 @@ namespace project.MainFormFunctions
         {
             this.Hide();
             Program.mainForm.Show();
+        }
+
+        private void AddForm_Shown(object sender, EventArgs e)
+        {
+            if (_isIncrease)
+            {
+                actionLabel.Text = "Пополнение";
+                actionLabel.Location = new Point(77, 22);
+            }
+            else
+            {
+                actionLabel.Text = "Снятие";
+                actionLabel.Location = new Point(145, 22);
+            }
         }
     }
 }

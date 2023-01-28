@@ -45,7 +45,8 @@
             // 
             this.HistoryForm_palette.ButtonSpecs.FormClose.Image = global::project.Properties.Resources.mc_red;
             this.HistoryForm_palette.ButtonSpecs.FormClose.ImageStates.ImagePressed = global::project.Properties.Resources.mc_red;
-            this.HistoryForm_palette.ButtonSpecs.FormClose.ImageStates.ImageTracking = global::project.Properties.Resources.mc_red;
+            this.HistoryForm_palette.ButtonSpecs.FormClose.ImageStates.ImageTracking = global::project.Properties.Resources.sign_error_icon;
+            this.HistoryForm_palette.ButtonSpecs.FormClose.Style = ComponentFactory.Krypton.Toolkit.PaletteButtonStyle.Form;
             this.HistoryForm_palette.ButtonSpecs.FormMax.Image = global::project.Properties.Resources.mc_green;
             this.HistoryForm_palette.ButtonSpecs.FormMax.ImageStates.ImagePressed = global::project.Properties.Resources.mc_green;
             this.HistoryForm_palette.ButtonSpecs.FormMax.ImageStates.ImageTracking = global::project.Properties.Resources.mc_green;
@@ -108,6 +109,7 @@
             this.historyLabel.StateCommon.ShortText.ColorAngle = 45F;
             this.historyLabel.StateCommon.ShortText.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Linear;
             this.historyLabel.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI Black", 35F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.historyLabel.StateCommon.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAliasGridFit;
             this.historyLabel.TabIndex = 5;
             this.historyLabel.Values.Text = "История";
             // 
@@ -139,7 +141,7 @@
             this.transfersLabel.Location = new System.Drawing.Point(31, 4);
             this.transfersLabel.Name = "transfersLabel";
             this.transfersLabel.Size = new System.Drawing.Size(113, 28);
-            this.transfersLabel.TabIndex = 2;
+            this.transfersLabel.TabIndex = 1;
             this.transfersLabel.Text = "Переводы";
             this.transfersLabel.Click += new System.EventHandler(this.transfersLabel_Click);
             // 
@@ -151,10 +153,10 @@
             this.transactionsLabel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.transactionsLabel.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
             this.transactionsLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(135)))), ((int)(((byte)(39)))));
-            this.transactionsLabel.Location = new System.Drawing.Point(318, 4);
+            this.transactionsLabel.Location = new System.Drawing.Point(313, 4);
             this.transactionsLabel.Name = "transactionsLabel";
             this.transactionsLabel.Size = new System.Drawing.Size(112, 28);
-            this.transactionsLabel.TabIndex = 1;
+            this.transactionsLabel.TabIndex = 2;
             this.transactionsLabel.Text = "Операции";
             this.transactionsLabel.Click += new System.EventHandler(this.transactionsLabel_Click);
             // 

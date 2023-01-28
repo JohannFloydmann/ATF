@@ -53,7 +53,8 @@
             // 
             this.MainForm_palette.ButtonSpecs.FormClose.Image = global::project.Properties.Resources.mc_red;
             this.MainForm_palette.ButtonSpecs.FormClose.ImageStates.ImagePressed = global::project.Properties.Resources.mc_red;
-            this.MainForm_palette.ButtonSpecs.FormClose.ImageStates.ImageTracking = global::project.Properties.Resources.mc_red;
+            this.MainForm_palette.ButtonSpecs.FormClose.ImageStates.ImageTracking = global::project.Properties.Resources.sign_error_icon;
+            this.MainForm_palette.ButtonSpecs.FormClose.Style = ComponentFactory.Krypton.Toolkit.PaletteButtonStyle.Form;
             this.MainForm_palette.ButtonSpecs.FormMax.Image = global::project.Properties.Resources.mc_green;
             this.MainForm_palette.ButtonSpecs.FormMax.ImageStates.ImagePressed = global::project.Properties.Resources.mc_green;
             this.MainForm_palette.ButtonSpecs.FormMax.ImageStates.ImageTracking = global::project.Properties.Resources.mc_green;
@@ -158,6 +159,7 @@
             this.increasedMoneyLabel.StateCommon.ShortText.Color1 = System.Drawing.Color.DarkGreen;
             this.increasedMoneyLabel.StateCommon.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(99)))), ((int)(((byte)(23)))));
             this.increasedMoneyLabel.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.increasedMoneyLabel.StateCommon.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAliasGridFit;
             this.increasedMoneyLabel.TabIndex = 3;
             this.increasedMoneyLabel.Values.Text = "↑ 10";
             this.increasedMoneyLabel.Paint += new System.Windows.Forms.PaintEventHandler(this.kryptonLabel2_Paint);
@@ -171,6 +173,7 @@
             this.decreasedMoneyLabel.Size = new System.Drawing.Size(66, 30);
             this.decreasedMoneyLabel.StateCommon.ShortText.Color1 = System.Drawing.Color.DarkRed;
             this.decreasedMoneyLabel.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.decreasedMoneyLabel.StateCommon.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAliasGridFit;
             this.decreasedMoneyLabel.TabIndex = 4;
             this.decreasedMoneyLabel.Values.Text = "↓5000";
             // 
@@ -183,6 +186,7 @@
             this.moneyLabel.Size = new System.Drawing.Size(352, 51);
             this.moneyLabel.StateCommon.ShortText.Color1 = System.Drawing.Color.White;
             this.moneyLabel.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI Black", 25F, System.Drawing.FontStyle.Bold);
+            this.moneyLabel.StateCommon.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAliasGridFit;
             this.moneyLabel.TabIndex = 1;
             this.moneyLabel.Values.Text = "₸ [u_currentMoney]";
             // 
@@ -194,13 +198,14 @@
             this.numberLabel.Size = new System.Drawing.Size(169, 30);
             this.numberLabel.StateCommon.ShortText.Color1 = System.Drawing.Color.White;
             this.numberLabel.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI Black", 14F, System.Drawing.FontStyle.Bold);
+            this.numberLabel.StateCommon.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAliasGridFit;
             this.numberLabel.TabIndex = 0;
             this.numberLabel.Values.Text = "u_phoneNumber";
             // 
             // transferButton
             // 
             this.transferButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.transferButton.Location = new System.Drawing.Point(155, 529);
+            this.transferButton.Location = new System.Drawing.Point(157, 528);
             this.transferButton.Name = "transferButton";
             this.transferButton.OverrideDefault.Back.Color1 = System.Drawing.Color.Transparent;
             this.transferButton.OverrideDefault.Back.Color2 = System.Drawing.Color.Transparent;
@@ -237,7 +242,8 @@
             this.transferButton.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(183)))), ((int)(((byte)(51)))));
             this.transferButton.StateCommon.Content.ShortText.ColorAngle = 45F;
             this.transferButton.StateCommon.Content.ShortText.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Linear;
-            this.transferButton.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
+            this.transferButton.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Black", 15F, System.Drawing.FontStyle.Bold);
+            this.transferButton.StateCommon.Content.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAliasGridFit;
             this.transferButton.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(57)))), ((int)(((byte)(4)))));
             this.transferButton.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(175)))), ((int)(((byte)(35)))));
             this.transferButton.StatePressed.Back.ColorAngle = 45F;
@@ -275,7 +281,7 @@
             // 
             this.outButton.AutoSize = true;
             this.outButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.outButton.Location = new System.Drawing.Point(141, 418);
+            this.outButton.Location = new System.Drawing.Point(136, 417);
             this.outButton.Name = "outButton";
             this.outButton.OverrideDefault.Back.Color1 = System.Drawing.Color.Transparent;
             this.outButton.OverrideDefault.Back.Color2 = System.Drawing.Color.Transparent;
@@ -294,7 +300,7 @@
             this.outButton.OverrideDefault.Content.ShortText.ColorAngle = 45F;
             this.outButton.OverrideDefault.Content.ShortText.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Linear;
             this.outButton.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.outButton.Size = new System.Drawing.Size(204, 78);
+            this.outButton.Size = new System.Drawing.Size(213, 78);
             this.outButton.StateCommon.Back.Color1 = System.Drawing.Color.Transparent;
             this.outButton.StateCommon.Back.Color2 = System.Drawing.Color.Transparent;
             this.outButton.StateCommon.Back.ColorAngle = 45F;
@@ -312,7 +318,8 @@
             this.outButton.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(183)))), ((int)(((byte)(51)))));
             this.outButton.StateCommon.Content.ShortText.ColorAngle = 45F;
             this.outButton.StateCommon.Content.ShortText.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Linear;
-            this.outButton.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
+            this.outButton.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Black", 15F, System.Drawing.FontStyle.Bold);
+            this.outButton.StateCommon.Content.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAliasGridFit;
             this.outButton.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(57)))), ((int)(((byte)(4)))));
             this.outButton.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(175)))), ((int)(((byte)(35)))));
             this.outButton.StatePressed.Back.ColorAngle = 45F;
@@ -349,7 +356,7 @@
             // addButton
             // 
             this.addButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.addButton.Location = new System.Drawing.Point(155, 306);
+            this.addButton.Location = new System.Drawing.Point(157, 306);
             this.addButton.Name = "addButton";
             this.addButton.OverrideDefault.Back.Color1 = System.Drawing.Color.Transparent;
             this.addButton.OverrideDefault.Back.Color2 = System.Drawing.Color.Transparent;
@@ -386,7 +393,8 @@
             this.addButton.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(183)))), ((int)(((byte)(51)))));
             this.addButton.StateCommon.Content.ShortText.ColorAngle = 45F;
             this.addButton.StateCommon.Content.ShortText.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Linear;
-            this.addButton.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
+            this.addButton.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Black", 15F, System.Drawing.FontStyle.Bold);
+            this.addButton.StateCommon.Content.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAliasGridFit;
             this.addButton.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(57)))), ((int)(((byte)(4)))));
             this.addButton.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(175)))), ((int)(((byte)(35)))));
             this.addButton.StatePressed.Back.ColorAngle = 45F;
@@ -432,6 +440,7 @@
             this.historyLabel.StateCommon.ShortText.ColorAngle = 45F;
             this.historyLabel.StateCommon.ShortText.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Linear;
             this.historyLabel.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI Black", 15F, System.Drawing.FontStyle.Bold);
+            this.historyLabel.StateCommon.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAliasGridFit;
             this.historyLabel.TabIndex = 3;
             this.historyLabel.Values.Text = "История";
             this.historyLabel.Click += new System.EventHandler(this.historyButton_Click);
@@ -440,7 +449,7 @@
             // 
             this.backArrowPicture.Cursor = System.Windows.Forms.Cursors.Hand;
             this.backArrowPicture.Image = global::project.Properties.Resources.backArrow;
-            this.backArrowPicture.Location = new System.Drawing.Point(12, 223);
+            this.backArrowPicture.Location = new System.Drawing.Point(12, 228);
             this.backArrowPicture.Name = "backArrowPicture";
             this.backArrowPicture.Size = new System.Drawing.Size(39, 30);
             this.backArrowPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
