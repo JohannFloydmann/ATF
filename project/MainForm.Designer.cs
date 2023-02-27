@@ -43,10 +43,12 @@
             this.addButton = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.historyLabel = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.backArrowPicture = new System.Windows.Forms.PictureBox();
+            this.accountBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.infoPanel)).BeginInit();
             this.infoPanel.SuspendLayout();
             this.moneyLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.backArrowPicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accountBox)).BeginInit();
             this.SuspendLayout();
             // 
             // MainForm_palette
@@ -108,6 +110,7 @@
             // 
             // infoPanel
             // 
+            this.infoPanel.Controls.Add(this.accountBox);
             this.infoPanel.Controls.Add(this.nameLabel);
             this.infoPanel.Controls.Add(this.moneyLayoutPanel);
             this.infoPanel.Controls.Add(this.moneyLabel);
@@ -134,6 +137,7 @@
             this.nameLabel.Size = new System.Drawing.Size(460, 45);
             this.nameLabel.TabIndex = 3;
             this.nameLabel.Text = "label1";
+            this.nameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // moneyLayoutPanel
             // 
@@ -457,6 +461,18 @@
             this.backArrowPicture.TabStop = false;
             this.backArrowPicture.Click += new System.EventHandler(this.backArrowPicture_Click);
             // 
+            // accountBox
+            // 
+            this.accountBox.BackColor = System.Drawing.Color.Transparent;
+            this.accountBox.Image = global::project.Properties.Resources.account;
+            this.accountBox.Location = new System.Drawing.Point(12, 12);
+            this.accountBox.Name = "accountBox";
+            this.accountBox.Size = new System.Drawing.Size(30, 30);
+            this.accountBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.accountBox.TabIndex = 4;
+            this.accountBox.TabStop = false;
+            this.accountBox.Click += new System.EventHandler(this.accountBox_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -485,6 +501,7 @@
             this.moneyLayoutPanel.ResumeLayout(false);
             this.moneyLayoutPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.backArrowPicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accountBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -505,5 +522,6 @@
         private System.Windows.Forms.PictureBox backArrowPicture;
         internal ComponentFactory.Krypton.Toolkit.KryptonLabel historyLabel;
         internal System.Windows.Forms.Label nameLabel;
+        private System.Windows.Forms.PictureBox accountBox;
     }
 }

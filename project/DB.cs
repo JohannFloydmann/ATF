@@ -30,13 +30,22 @@ namespace project
         public void GetData()
         {
             SqlCommand cmd = new SqlCommand($"SELECT * FROM USERS WHERE u_login = @login", LoginForm.dataBase.GetConnection());
-            cmd.Parameters.Add("@login", SqlDbType.VarChar).Value = Program.loginForm.loginField.Text;
+            cmd.Parameters.Add("@login", SqlDbType.VarChar).Value = Program.currentUser.Login;
             LoginForm.userDataTable.Clear();
             LoginForm.adapter.SelectCommand = cmd;
             LoginForm.adapter.Fill(LoginForm.userDataTable);
 
-            Program.mainForm.nameLabel.Text = $"{LoginForm.userDataTable.Rows[0].Field<string>("u_name")} {LoginForm.userDataTable.Rows[0].Field<string>("u_surname")}";
-            Program.mainForm.numberLabel.Text = LoginForm.userDataTable.Rows[0].Field<string>("u_phoneNumber");
+            Program.currentUser.Login = LoginForm.userDataTable.Rows[0].Field<string>("u_login");
+            Program.currentUser.Email = LoginForm.userDataTable.Rows[0].Field<string>("u_email"); 
+            Program.currentUser.PhoneNumber = LoginForm.userDataTable.Rows[0].Field<string>("u_phoneNumber");
+            Program.currentUser.Name = LoginForm.userDataTable.Rows[0].Field<string>("u_name");
+            Program.currentUser.Surname = LoginForm.userDataTable.Rows[0].Field<string>("u_surname");
+            Program.currentUser.FullName = $"{LoginForm.userDataTable.Rows[0].Field<string>("u_name")} {LoginForm.userDataTable.Rows[0].Field<string>("u_surname")}";
+            Program.currentUser.Password = LoginForm.userDataTable.Rows[0].Field<string>("u_password");
+            Program.currentUser.currentMoney = LoginForm.userDataTable.Rows[0].Field<Int32>("u_currentMoney").ToString("N0");
+
+            Program.mainForm.nameLabel.Text = Program.currentUser.FullName;
+            Program.mainForm.numberLabel.Text = Program.currentUser.PhoneNumber;
             Program.mainForm.moneyLabel.Text = $"₸ {LoginForm.userDataTable.Rows[0].Field<Int32>("u_currentMoney").ToString("N0")}";
             Program.mainForm.increasedMoneyLabel.Text = $"↑ {LoginForm.userDataTable.Rows[0].Field<Int32>("u_increasedMoney").ToString("N0")}";
             Program.mainForm.decreasedMoneyLabel.Text = $"↓ {LoginForm.userDataTable.Rows[0].Field<Int32>("u_decreasedMoney").ToString("N0")}";
@@ -47,12 +56,12 @@ namespace project
             DateTime dateTime = DateTime.UtcNow;
             string sqlFormattedDate = dateTime.ToString("yyyy-MM-dd HH:mm:ss");
             SqlCommand cmd = new SqlCommand($"UPDATE USERS SET u_currentMoney = u_currentMoney + {sum}, u_increasedMoney = u_increasedMoney + {sum} WHERE u_login = @login", LoginForm.dataBase.GetConnection());
-            cmd.Parameters.Add("@login", SqlDbType.VarChar).Value = Program.loginForm.loginField.Text;
+            cmd.Parameters.Add("@login", SqlDbType.VarChar).Value = Program.currentUser.Login;
 
             //запись в историю
             SqlCommand cmdHistory = new SqlCommand($"INSERT INTO HISTORY (t_sender, t_reciever, t_amount, t_datetime) VALUES (@senderLogin, @recieverLogin, {sum}, @DateTime)", LoginForm.dataBase.GetConnection());
             cmdHistory.Parameters.Add("@senderLogin", SqlDbType.VarChar).Value = Program.AtmName;
-            cmdHistory.Parameters.Add("@recieverLogin", SqlDbType.VarChar).Value = Program.loginForm.loginField.Text;
+            cmdHistory.Parameters.Add("@recieverLogin", SqlDbType.VarChar).Value = Program.currentUser.Login;
             cmdHistory.Parameters.Add("@DateTime", SqlDbType.SmallDateTime).Value = sqlFormattedDate;
 
             LoginForm.dataBase.OpenConnection();
@@ -70,7 +79,7 @@ namespace project
 
             DataTable dt = new DataTable();
             SqlCommand cmdCheck = new SqlCommand($"SELECT u_currentMoney FROM USERS WHERE u_login = @login", LoginForm.dataBase.GetConnection());
-            cmdCheck.Parameters.Add("@login", SqlDbType.VarChar).Value = Program.loginForm.loginField.Text;
+            cmdCheck.Parameters.Add("@login", SqlDbType.VarChar).Value = Program.currentUser.Login;
             LoginForm.userDataTable.Clear();
             LoginForm.adapter.SelectCommand = cmdCheck;
             LoginForm.adapter.Fill(dt);
@@ -83,12 +92,12 @@ namespace project
             dt.Dispose();
 
             SqlCommand cmd = new SqlCommand($"UPDATE USERS SET u_currentMoney = u_currentMoney - {sum}, u_decreasedMoney = u_decreasedMoney + {sum} WHERE u_login = @login", LoginForm.dataBase.GetConnection());
-            cmd.Parameters.Add("@login", SqlDbType.VarChar).Value = Program.loginForm.loginField.Text;
+            cmd.Parameters.Add("@login", SqlDbType.VarChar).Value = Program.currentUser.Login;
 
             // запись в историю
             SqlCommand cmdHistory = new SqlCommand($"INSERT INTO HISTORY (t_sender, t_reciever, t_amount, t_datetime) VALUES (@senderLogin, @recieverLogin, {sum}, @DateTime)", LoginForm.dataBase.GetConnection());
             cmdHistory.Parameters.Add("@recieverLogin", SqlDbType.VarChar).Value = Program.AtmName;
-            cmdHistory.Parameters.Add("@senderLogin", SqlDbType.VarChar).Value = Program.loginForm.loginField.Text;
+            cmdHistory.Parameters.Add("@senderLogin", SqlDbType.VarChar).Value = Program.currentUser.Login;
             cmdHistory.Parameters.Add("@DateTime", SqlDbType.SmallDateTime).Value = sqlFormattedDate;
 
             LoginForm.dataBase.OpenConnection();
@@ -107,7 +116,7 @@ namespace project
             cmdAdd.Parameters.Add("@number", SqlDbType.VarChar).Value = number;
 
             SqlCommand cmdOut = new SqlCommand($"UPDATE USERS SET u_currentMoney = u_currentMoney - {sum}, u_decreasedMoney = u_decreasedMoney + {sum} WHERE u_login = @login", LoginForm.dataBase.GetConnection());
-            cmdOut.Parameters.Add("@login", SqlDbType.VarChar).Value = Program.loginForm.loginField.Text;
+            cmdOut.Parameters.Add("@login", SqlDbType.VarChar).Value = Program.currentUser.Login; 
 
             SqlCommand findAccountByNumber = new SqlCommand($"SELECT u_login FROM USERS WHERE u_phoneNumber = {number}", LoginForm.dataBase.GetConnection());
             LoginForm.userDataTable.Clear();
@@ -116,7 +125,7 @@ namespace project
 
             //запись в историю
             SqlCommand cmdHistory = new SqlCommand($"INSERT INTO HISTORY (t_sender, t_reciever, t_amount, t_datetime) VALUES (@senderLogin, @recieverLogin, {sum}, @DateTime)", LoginForm.dataBase.GetConnection());
-            cmdHistory.Parameters.Add("@senderLogin", SqlDbType.VarChar).Value = Program.loginForm.loginField.Text;
+            cmdHistory.Parameters.Add("@senderLogin", SqlDbType.VarChar).Value = Program.currentUser.Login; ;
             cmdHistory.Parameters.Add("@recieverLogin", SqlDbType.VarChar).Value = LoginForm.userDataTable.Rows[0].Field<string>("u_login");
             cmdHistory.Parameters.Add("@DateTime", SqlDbType.SmallDateTime).Value = sqlFormattedDate;
 
@@ -133,7 +142,7 @@ namespace project
         public void getHistory()
         {
             SqlCommand cmdHistory = new SqlCommand($"SELECT * FROM HISTORY WHERE t_sender = @login OR t_reciever = @login ORDER BY t_datetime DESC", LoginForm.dataBase.GetConnection());
-            cmdHistory.Parameters.Add("@login", SqlDbType.VarChar).Value = Program.loginForm.loginField.Text;
+            cmdHistory.Parameters.Add("@login", SqlDbType.VarChar).Value = Program.currentUser.Login; ;
             HistoryForm.historyDataTable.Clear();
             LoginForm.adapter.SelectCommand = cmdHistory;
             LoginForm.adapter.Fill(HistoryForm.historyDataTable);
@@ -150,6 +159,16 @@ namespace project
             string data = LoginForm.userDataTable.Rows[0].Field<string>(Data);
             LoginForm.userDataTable.Clear();
             return data;
+        }
+
+        public void updateDataByLogin(string Data, string Login, string column)
+        {
+            SqlCommand updateCmd = new SqlCommand($"UPDATE USERS SET {column} = @newLogin WHERE u_login = @login", LoginForm.dataBase.GetConnection());
+            updateCmd.Parameters.Add("@login", SqlDbType.VarChar).Value = Login;
+            updateCmd.Parameters.Add("@newLogin", SqlDbType.VarChar).Value = Data;
+            LoginForm.dataBase.OpenConnection();
+            updateCmd.ExecuteNonQuery();
+            LoginForm.dataBase.CloseConnection();
         }
     }
 }

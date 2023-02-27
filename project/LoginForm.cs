@@ -40,6 +40,7 @@ namespace project
             adapter.Fill(userDataTable);
             if (userDataTable.Rows.Count > 0)
             {
+                Program.currentUser.Login = loginField.Text;
                 userDataTable.Clear();
                 Program.signUpForm.Hide();
                 Program.mainForm.Show();

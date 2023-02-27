@@ -94,3 +94,5 @@ D:\Документы\ШАГ\C#\project\project\project\obj\Debug\project.Histor
 D:\Документы\ШАГ\C#\project\project\project\obj\Debug\project.Transaction.resources
 D:\Документы\ШАГ\C#\project\project\project\obj\Debug\project.historyControls.Transactions.resources
 D:\Документы\ШАГ\C#\project\project\project\obj\Debug\project.historyControls.Transfers.resources
+D:\Документы\ШАГ\C#\project\project\project\obj\Debug\project.AccountForm.resources
+D:\Документы\ШАГ\C#\project\project\project\obj\Debug\project.AccountInfo.resources

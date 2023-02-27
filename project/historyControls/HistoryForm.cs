@@ -14,8 +14,8 @@ namespace project
 {
     public partial class HistoryForm : KryptonForm
     {
-        Transactions transactions = new Transactions();
-        Transfers transfers = new Transfers();
+        internal Transactions transactions = new Transactions();
+        internal Transfers transfers = new Transfers();
 
         public static DataTable historyDataTable = new DataTable();
         public HistoryForm()
@@ -27,7 +27,7 @@ namespace project
         {
             Application.Exit();
         }
-        private void addUserControl(UserControl userControl)
+        internal void addUserControl(UserControl userControl)
         {
             userControl.Dock = DockStyle.Fill;
             containerPanel.Controls.Clear();
@@ -36,12 +36,13 @@ namespace project
         }
         private void HistoryForm_Load(object sender, EventArgs e)
         {
-            addUserControl(transfers);
-            createItems();
+            
         }
 
-        private void createItems()
+        internal void createItems()
         {
+            transfers.transfersPanel.Controls.Clear();
+            this.transactions.transactionPanel.Controls.Clear();
             LoginForm.dataBase.getHistory();
             Transaction[] transactions = new Transaction[historyDataTable.Rows.Count];
             bool isTransfer = true;

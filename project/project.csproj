@@ -91,7 +91,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountForm.Designer.cs">
+      <DependentUpon>AccountForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Check.cs" />
+    <Compile Include="User.cs" />
     <Compile Include="DB.cs" />
     <Compile Include="Default.cs" />
     <Compile Include="historyControls\Transactions.cs">
@@ -151,6 +158,18 @@
     <Compile Include="Transaction.Designer.cs">
       <DependentUpon>Transaction.cs</DependentUpon>
     </Compile>
+    <Compile Include="AccountInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AccountInfo.Designer.cs">
+      <DependentUpon>AccountInfo.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AccountForm.resx">
+      <DependentUpon>AccountForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountInfo.resx">
+      <DependentUpon>AccountInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="historyControls\Transactions.resx">
       <DependentUpon>Transactions.cs</DependentUpon>
     </EmbeddedResource>
@@ -252,6 +271,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\greenArrowDone.png" />
+    <None Include="Resources\account.png" />
+    <None Include="Resources\edit.png" />
+    <None Include="Resources\cross.png" />
     <Content Include="Resources\redArrowDone.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

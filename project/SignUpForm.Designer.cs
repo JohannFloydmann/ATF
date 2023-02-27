@@ -385,13 +385,13 @@
 
         private ComponentFactory.Krypton.Toolkit.KryptonPalette SignUp_palette;
         internal ComponentFactory.Krypton.Toolkit.KryptonTextBox loginField;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox passwordField;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel signUpLabel;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox nameField;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox surnameField;
         private ComponentFactory.Krypton.Toolkit.KryptonButton enterButton;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox emailField;
-        internal ComponentFactory.Krypton.Toolkit.KryptonTextBox numberField;
         private System.Windows.Forms.PictureBox backArrowPicture;
+        internal ComponentFactory.Krypton.Toolkit.KryptonTextBox passwordField;
+        protected internal ComponentFactory.Krypton.Toolkit.KryptonTextBox nameField;
+        protected internal ComponentFactory.Krypton.Toolkit.KryptonTextBox surnameField;
+        protected internal ComponentFactory.Krypton.Toolkit.KryptonTextBox emailField;
+        protected internal ComponentFactory.Krypton.Toolkit.KryptonTextBox numberField;
     }
 }

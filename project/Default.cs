@@ -16,5 +16,14 @@ namespace project
         public static string _surnameDefault = "Фамилия";
         public static string _addOwnDefault = "Сумма";
         public static string _receiverPhoneNumberDefault = "Номер получателя";
+        public static string _currentPasswordDefault = "Текущий пароль";
+
+        public enum Data { 
+            Логин,
+            Пароль,
+            Имя,
+            Телефон,
+            Email,
+        }
     }
 }

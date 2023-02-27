@@ -17,6 +17,8 @@ namespace project
         public static AddForm addForm;
         public static TransferForm transferForm;
         public static HistoryForm historyForm;
+        public static AccountForm accountForm;
+        public static User currentUser;
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>
@@ -27,6 +29,7 @@ namespace project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            currentUser = new User();
             signUpForm = new SignUpForm();
             mainForm = new MainForm();
             Application.Run(loginForm = new LoginForm());

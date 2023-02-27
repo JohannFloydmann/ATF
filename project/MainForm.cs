@@ -46,44 +46,29 @@ namespace project
         private void addButton_Click(object sender, EventArgs e)
         {
             AddForm._isIncrease = true;
-            if (_isAddFormOpened == false)
-            {
+            if (Program.addForm == null)
                 Program.addForm = new AddForm(true);
-                Program.addForm.Show();
-                this.Hide();
-                _isAddFormOpened=true;
-            }
-            else
-            {
-                this.Hide();
-                Program.addForm.actionLabel.Text = "Пополнение";
-                Program.addForm.actionLabel.Location = new Point(77, 22);
-                Program.addForm.Show();
-            }
+            this.Hide();
+            Program.addForm.actionLabel.Text = "Пополнение";
+            Program.addForm.actionLabel.Location = new Point(77, 22);
+            Program.addForm.Show();
         }
 
         private void outButton_Click(object sender, EventArgs e)
         {
             AddForm._isIncrease = false;
-            if (_isOutFormOpened == false)
-            {
+            if (Program.addForm == null)
                 Program.addForm = new AddForm(false);
-                Program.addForm.Show();
-                this.Hide();
-                _isOutFormOpened=true;
-            }
-            else
-            {
-                this.Hide();
-                Program.addForm.actionLabel.Text = "Снятие";
-                Program.addForm.actionLabel.Location = new Point(145, 22);
-                Program.addForm.Show();
-            }
+            this.Hide();
+            Program.addForm.actionLabel.Text = "Снятие";
+            Program.addForm.actionLabel.Location = new Point(145, 22);
+            Program.addForm.Show();
         }
 
         private void transferButton_Click(object sender, EventArgs e)
         {
-            Program.transferForm = new TransferForm();
+            if (Program.transferForm == null)
+                Program.transferForm = new TransferForm();
             Program.transferForm.Show();
             this.Hide();
         }
@@ -108,14 +93,26 @@ namespace project
         }
         private void historyButton_Click(object sender, EventArgs e)
         {
-            Program.historyForm = new HistoryForm();
+            if (Program.historyForm == null)
+                Program.historyForm = new HistoryForm();
+            Program.historyForm.createItems();
+            Program.historyForm.addUserControl(Program.historyForm.transfers);
             Program.historyForm.Show();
             this.Hide();
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            nameLabel.TextAlign = ContentAlignment.MiddleCenter;
+            
+        }
+
+        private void accountBox_Click(object sender, EventArgs e)
+        {
+            if (Program.accountForm == null)
+                Program.accountForm = new AccountForm();
+            Program.accountForm.createItems();
+            this.Hide();
+            Program.accountForm.Show();
         }
     }
 }

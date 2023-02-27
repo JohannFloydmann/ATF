@@ -9,7 +9,7 @@ namespace project
     {
         internal static bool LoginCheck(string login)
         {
-            if (login == _loginDefault)
+            if (login == _loginDefault || login == "")
             {
                 MessageBox.Show("Введите логин", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
@@ -19,46 +19,41 @@ namespace project
                 MessageBox.Show("Введите логин без пробела", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
-            return LoginExistsCheck("логин");
+            return LoginExistsCheck(login);
         }
         internal static bool PasswordCheck(string password)
         {
-            if (password == _passwordDefault)
+            if (password == _passwordDefault || password == "")
             {
                 MessageBox.Show("Введите пароль", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             if (password.IndexOf(' ') > -1)
             {
-                MessageBox.Show("Введите пароль без пробела", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Введите пароль без пробелов", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             return PasswordStrenthCheck(password);
         }
         internal static bool NameCheck(string name)
         {
-            if (name == _nameDefault || name == _surnameDefault)
+            if (name == _nameDefault || name == _surnameDefault || name == "")
             {
-                MessageBox.Show("Введите имя или фамилию", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-            if (name.IndexOf(' ') > -1)
-            {
-                MessageBox.Show("Введите имя или фамилию без пробела", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Введите имя и фамилию", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             return true;
         }
         internal static bool EmailCheck(string email)
         {
-            if (email == _emailDefault)
+            if (email == _emailDefault || email == "")
             {
                 MessageBox.Show("Введите email", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             if (email.IndexOf(' ') > -1)
             {
-                MessageBox.Show("Введите email без пробела", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Введите email без пробелов", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             if (email.IndexOf('@') < 0)
@@ -70,14 +65,14 @@ namespace project
         }
         internal static bool PhoneNumberCheck(string phoneNumber)
         {
-            if (phoneNumber == _phoneNumberDefault)
+            if (phoneNumber == _phoneNumberDefault || phoneNumber == "")
             {
                 MessageBox.Show("Введите номер телефона", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             if (phoneNumber.IndexOf(' ') > -1)
             {
-                MessageBox.Show("Введите номер телефона без пробела", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Введите номер телефона без пробелов", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             foreach (char digit in phoneNumber)
@@ -87,19 +82,19 @@ namespace project
                     return false;
                 }
             }
-            return PhoneNumberExistsCheck("номер телефона");
+            return PhoneNumberExistsCheck(phoneNumber);
         }
-        private static bool LoginExistsCheck(string type)
+        private static bool LoginExistsCheck(string login)
         {
             DataTable loginCheckDataTable = new DataTable();
             SqlCommand cmd = new SqlCommand($"SELECT u_login FROM USERS WHERE u_login = @login", LoginForm.dataBase.GetConnection());
-            cmd.Parameters.Add("@login", SqlDbType.VarChar).Value = Program.signUpForm.loginField.Text;
+            cmd.Parameters.Add("@login", SqlDbType.VarChar).Value = login;
             LoginForm.adapter.SelectCommand = cmd;
             LoginForm.adapter.Fill(loginCheckDataTable);
             if (loginCheckDataTable.Rows.Count > 0)
             {
                 loginCheckDataTable.Dispose();
-                MessageBox.Show($"Такой {type} уже используется. Попробуй другой", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Такой логин уже используется. Попробуйте другой", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             else
@@ -109,17 +104,17 @@ namespace project
             }
                 
         }
-        private static bool PhoneNumberExistsCheck(string type)
+        private static bool PhoneNumberExistsCheck(string phoneNumber)
         {
             DataTable phoneNumberCheckDataTable = new DataTable();
             SqlCommand cmd = new SqlCommand($"SELECT * FROM USERS WHERE u_phoneNumber = @number", LoginForm.dataBase.GetConnection());
-            cmd.Parameters.Add("@number", SqlDbType.VarChar).Value = Program.signUpForm.numberField.Text;
+            cmd.Parameters.Add("@number", SqlDbType.VarChar).Value = phoneNumber;
             LoginForm.adapter.SelectCommand = cmd;
             LoginForm.adapter.Fill(phoneNumberCheckDataTable);
             if (phoneNumberCheckDataTable.Rows.Count > 0)
             {
                 phoneNumberCheckDataTable.Dispose();
-                MessageBox.Show($"Такой {type} уже используется. Попробуй другой", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Такой номер телефона уже используется. Попробуйте другой", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             else
@@ -139,7 +134,7 @@ namespace project
             if (ContainsSeparator(pass)) strength++;
             if (ContainsUpperLetter(pass)) strength++;
 
-            if (strength >= 3) return true;
+            if (strength >= 2) return true;
             MessageBox.Show("Пароль слишком легкий");
             return false;
         }

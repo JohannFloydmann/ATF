@@ -118,7 +118,7 @@
             this.containerPanel.Location = new System.Drawing.Point(12, 88);
             this.containerPanel.Margin = new System.Windows.Forms.Padding(0);
             this.containerPanel.Name = "containerPanel";
-            this.containerPanel.Size = new System.Drawing.Size(460, 561);
+            this.containerPanel.Size = new System.Drawing.Size(502, 561);
             this.containerPanel.TabIndex = 6;
             // 
             // panel1
@@ -191,6 +191,7 @@
             this.Text = "ATF Bank";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.HistoryForm_FormClosing);
             this.Load += new System.EventHandler(this.HistoryForm_Load);
+            this.Shown += new System.EventHandler(this.HistoryForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.backArrowPicture)).EndInit();

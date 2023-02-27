@@ -67,7 +67,7 @@
             // timeLabel
             // 
             this.timeLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.timeLabel.Location = new System.Drawing.Point(388, 75);
+            this.timeLabel.Location = new System.Drawing.Point(411, 75);
             this.timeLabel.Name = "timeLabel";
             this.timeLabel.Size = new System.Drawing.Size(45, 22);
             this.timeLabel.StateCommon.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(209)))), ((int)(((byte)(217)))));
@@ -117,7 +117,7 @@
             // dateLabel
             // 
             this.dateLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateLabel.Location = new System.Drawing.Point(357, 3);
+            this.dateLabel.Location = new System.Drawing.Point(380, 3);
             this.dateLabel.Name = "dateLabel";
             this.dateLabel.Size = new System.Drawing.Size(76, 22);
             this.dateLabel.StateCommon.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(209)))), ((int)(((byte)(217)))));
@@ -144,7 +144,7 @@
             this.Controls.Add(this.dateLabel);
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "Transaction";
-            this.Size = new System.Drawing.Size(435, 98);
+            this.Size = new System.Drawing.Size(458, 98);
             ((System.ComponentModel.ISupportInitialize)(this.transactionPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
