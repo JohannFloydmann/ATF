@@ -1,2 +1,3 @@
 # Приложение для банкомата  
-которое у вас не запустится, тк у вас нет такой базы данных. Поэтому, для начала запустите файл "project\ATF_Bank.sql" и база данных создатся сама (если у вас стоит дефолтное расположение sql)
+Для установки необходимо запустить файл __ATF_Bank/Debug/setup.exe__\
+__[Presentation](https://docs.google.com/presentation/d/1Fr-IxFhhSgff3R-mJ9enDc3xkGA879EMxUv_TKATo1A/edit?usp=sharing)__
