@@ -125,7 +125,7 @@ namespace project
 
             //запись в историю
             SqlCommand cmdHistory = new SqlCommand($"INSERT INTO HISTORY (t_sender, t_reciever, t_amount, t_datetime) VALUES (@senderLogin, @recieverLogin, {sum}, @DateTime)", LoginForm.dataBase.GetConnection());
-            cmdHistory.Parameters.Add("@senderLogin", SqlDbType.VarChar).Value = Program.currentUser.Login; ;
+            cmdHistory.Parameters.Add("@senderLogin", SqlDbType.VarChar).Value = Program.currentUser.Login;
             cmdHistory.Parameters.Add("@recieverLogin", SqlDbType.VarChar).Value = LoginForm.userDataTable.Rows[0].Field<string>("u_login");
             cmdHistory.Parameters.Add("@DateTime", SqlDbType.SmallDateTime).Value = sqlFormattedDate;
 
