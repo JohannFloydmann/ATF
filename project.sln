@@ -5,7 +5,7 @@ VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project", "project\project.csproj", "{F1FF5208-8E28-4DA4-868A-849F55210E58}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "ATF_Bank", "..\..\ATF Bank\ATF_Bank\ATF_Bank.vdproj", "{CB40DD35-849C-4F56-AB1D-35F467000C67}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web-Api", "Web-Api\Web-Api.csproj", "{244D050C-BE23-4736-A173-070AF0B50417}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,8 +17,10 @@ Global
 		{F1FF5208-8E28-4DA4-868A-849F55210E58}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F1FF5208-8E28-4DA4-868A-849F55210E58}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F1FF5208-8E28-4DA4-868A-849F55210E58}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CB40DD35-849C-4F56-AB1D-35F467000C67}.Debug|Any CPU.ActiveCfg = Debug
-		{CB40DD35-849C-4F56-AB1D-35F467000C67}.Release|Any CPU.ActiveCfg = Release
+		{244D050C-BE23-4736-A173-070AF0B50417}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{244D050C-BE23-4736-A173-070AF0B50417}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{244D050C-BE23-4736-A173-070AF0B50417}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{244D050C-BE23-4736-A173-070AF0B50417}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

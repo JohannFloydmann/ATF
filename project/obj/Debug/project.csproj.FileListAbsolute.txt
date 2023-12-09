@@ -2,7 +2,6 @@ D:\Документы\ШАГ\C#\project\project\project\bin\Debug\project.exe.co
 D:\Документы\ШАГ\C#\project\project\project\bin\Debug\project.exe
 D:\Документы\ШАГ\C#\project\project\project\bin\Debug\project.pdb
 D:\Документы\ШАГ\C#\project\project\project\obj\Debug\project.csproj.AssemblyReference.cache
-D:\Документы\ШАГ\C#\project\project\project\obj\Debug\project.csproj.SuggestedBindingRedirects.cache
 D:\Документы\ШАГ\C#\project\project\project\obj\Debug\project.Properties.Resources.resources
 D:\Документы\ШАГ\C#\project\project\project\obj\Debug\project.csproj.GenerateResource.cache
 D:\Документы\ШАГ\C#\project\project\project\obj\Debug\project.csproj.CoreCompileInputs.cache
